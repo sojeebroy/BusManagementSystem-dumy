@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('header')
-Register
+UserRegistration
 @endsection
 @section('content')
 <h2>Registration form page</h2>

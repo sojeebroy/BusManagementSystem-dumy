@@ -1,83 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Bus Management System</title>
-    <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-
-
-
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 20px;
-      }
-      .row.content {height:auto;}
-    }
-
-    .gradient-custom {
-/* fallback for old browsers */
-background: #f093fb;
-
-/* Chrome 10-25, Safari 5.1-6 */
-background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
-
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1))
-}
-
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
-font-size: 1rem;
-line-height: 2.15;
-padding-left: .75em;
-padding-right: .75em;
-}
-.card-registration .select-arrow {
-top: 13px;
-}
-  </style>
+  <title>Bus Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-    <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="home">Bus Management System</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="home">Home</a></li>
-            <li><a href="register"><b>Register</b></a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-        </div>
+<nav class=" navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home">Bus Management System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="user/registration">Registration</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto">
+      </ul>
+      <ul class="navbar-nav me-auto">
+      </ul><ul class="navbar-nav me-auto">
+      </ul><ul class="navbar-nav me-auto">
+      </ul><ul class="navbar-nav me-auto">
+      </ul><ul class="navbar-nav me-auto">
+      </ul>
+      <ul class="navbar-nav me-auto">
+      </ul>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login">login</a>
+        </li>
+
+      </ul>
+
     </div>
-    </nav>
+  </div>
+</nav>
 
 
 
-
-
-</body>
-</html>
 
 @yield('content')
+
