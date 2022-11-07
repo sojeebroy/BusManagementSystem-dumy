@@ -1,6 +1,6 @@
 @extends('layouts.app2')
 @section('header')
-AdminProfile
+EditAdminProfile
 @endsection
 @section('content')
 
@@ -62,10 +62,11 @@ AdminProfile
 
 <div class="content">
     <br><br><br>
-    @foreach($admins as $adm)
     <div class="container">
     <div class="main-body">
-
+    <form action="/adminprofile/{{ $admins->id }}" method="POST">
+            @csrf
+            @method('PUT')
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
@@ -76,7 +77,7 @@ AdminProfile
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                     <hr>
-                    <h4>{{$adm ->name }}</h4>
+                    <h2>{{ $admins->name }}</h2>
                     </div>
                   </div>
                 </div>
@@ -93,7 +94,7 @@ AdminProfile
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    {{$adm ->name }}
+                    <input type="text" id="form3Example1c" name="name" class="form-control" value="{{ $admins->name }}"/>
                     </div>
                   </div>
                   <hr>
@@ -102,7 +103,7 @@ AdminProfile
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    {{$adm ->email }}
+                    <input type="text" id="form3Example1c" name="name" class="form-control" value="{{ $admins->email }}"/>
                     </div>
                   </div>
                   <hr>
@@ -111,7 +112,7 @@ AdminProfile
                       <h6 class="mb-0">Phone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    {{$adm ->phone }}
+                    <input type="text" id="form3Example1c" name="name" class="form-control" value="{{ $admins->phone }}"/>
                     </div>
                   </div>
                   <hr>
@@ -120,7 +121,7 @@ AdminProfile
                       <h6 class="mb-0">NID</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    {{$adm ->nid }}
+                    <input type="text" id="form3Example1c" name="name" class="form-control" value="{{ $admins->nid }}"/>
                     </div>
                   </div>
                   <hr>
@@ -129,23 +130,22 @@ AdminProfile
                       <h6 class="mb-0">Address</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    {{$adm ->address }}
+                    <input type="text" id="form3Example1c" name="name" class="form-control" value="{{ $admins->address }}"/>
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-info " href="adminprofileedit/{{ $adm->id }}">Edit</a>
-                      <a class="btn btn-info " href="admindashboard">Back</a>
+                    <button type="submit" class="btn btn-primary btn-lg">Update</button>
+                    <a class="btn btn-primary btn-lg " href="/adminprofile">Back</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-        </div>
+    </form>
+    </div>
     </div>
 </div>
-@endforeach
 @endsection

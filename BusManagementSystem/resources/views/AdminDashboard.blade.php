@@ -8,7 +8,7 @@ AdminDashboard
 
 <div class="content">
     <br><br><br>
-    <h2>Welcome</h2>
+    <h2>Dashboard</h2>
     <p>Sojeeb Roy Partho</p>
 
 

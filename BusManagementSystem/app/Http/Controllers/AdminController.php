@@ -28,8 +28,25 @@ class AdminController extends Controller
 
     public function profile()
     {
-
         $admins = Admin::all();
         return view('adminprofile',compact('admins'));
     }
+    public function EditProfile($id)
+    {
+        $admins = Admin::find($id);
+        return view('editadminprofile',compact('admins'));
+    }
+    public function update(Request $request,$id)
+    {
+        $admins = Admin::find($id);
+        $admins ->name = $request->input('name');
+        $admins ->email = $request->input('email');
+        $admins ->phone = $request->input('phone');
+        $admins ->nid = $request->input('nid');
+        $admins ->address = $request->input('address');
+        $admins ->update();
+        return redirect('adminprofile')->with('status',"Profile updated successfully..!!");
+
+    }
+
 }

@@ -30,9 +30,11 @@ Route::get('/login', function () {
 Route::get('admindashboard', function () {
     return view('admindashboard');
 });
+
 Route::get('adminprofile',[AdminController::class,'profile']);
+Route::get('adminprofileedit/{id}',[AdminController::class,'EditProfile']);
+Route::put('adminprofile/{id}'[AdminController::class.'update']);
 
 Route::get('adminregistration', [AdminController::class, 'view']);
 Route::post('adminregistration', [AdminController::class, 'registration']);
-// Route::get('adminregistration','AdminController@view');
-// Route::post('admindashboard','AdminController@registration');
+

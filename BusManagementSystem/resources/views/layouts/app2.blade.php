@@ -87,6 +87,7 @@ body {
 
 <div class="sidenav">
   <br><br>
+  <a href="admindashboard">Dashboard</a>
   <a href="adminprofile">profile</a>
   <a href="adminregistration">Create an Admin</a>
   <a href="#">Create a User</a>
